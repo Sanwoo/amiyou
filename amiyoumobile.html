@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="gb2312" />
+		<meta
+			name="viewport"
+			content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no"
+		/>
+		<meta
+			content="阿米游是一款非常火热的游戏盒子，主要以火热的单机小游戏为主，各大推广平台的小游戏在这里都可以直接在线免费玩，无需下载，在线体验各种魔性的游戏。"
+			name="description"
+		/>
+		<meta content="小游戏,安卓游戏,免下载游戏,手机游戏下载,小游戏秒玩,即点即玩,阿米游" name="keywords" />
+		<link rel="dns-prefetch" href="//zhushou.2345cdn.net" />
+		<link rel="shortcut icon" href="//zhushou.2345cdn.net/guanwang/fav.ico" type="image/x-icon" />
+		<title>阿米游 海量游戏,即点即玩</title>
+		<style>
+			* {
+				box-sizing: border-box;
+				padding: 0;
+				margin: 0;
+			}
+			*::before,
+			*::after {
+				box-sizing: inherit;
+			}
+			a {
+				text-decoration: none;
+				outline: none;
+			}
+			img {
+				vertical-align: top;
+			}
+
+			html {
+				font-size: 0.1388888888888889vw;
+			}
+
+			body {
+				font-size: 12px;
+				font-family: sans-serif;
+			}
+
+			.mask {
+				position: fixed;
+				top: 0px;
+				left: 0px;
+				z-index: 999;
+				display: flex;
+				display: none;
+				width: 100%;
+				height: 100%;
+				background: rgb(35, 32, 32, 0.9);
+			}
+
+			.mask-logo {
+				width: 96rem;
+				height: 96rem;
+				margin: 122rem 0 0 133rem;
+			}
+
+			.mask-text {
+				font-size: 34rem;
+				font-weight: 400;
+				color: #fff;
+				margin: 145rem 0 0 15rem;
+			}
+
+			.mask-guide-arrows {
+				width: 210rem;
+				height: 134rem;
+				position: absolute;
+				right: 0;
+				top: 0;
+			}
+
+			.headerwrapper {
+				position: relative;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				height: 100vh;
+				min-height: 640rem;
+				padding: 10px 0 20px;
+				background: #fffefb url(./zsimg/images/headerbg.jpg) 50% 0 no-repeat;
+				background-size: 100% auto;
+			}
+
+			.header {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				width: 100%;
+			}
+
+			.action-area {
+				flex: 1;
+				position: relative;
+				padding: 57rem 0 80rem;
+			}
+
+			.arrow-group {
+				position: absolute;
+				left: 50%;
+				bottom: 44rem;
+				transform: translateX(-50%);
+				width: 44rem;
+				height: 30rem;
+			}
+
+			.arrow1,
+			.arrow2 {
+				position: absolute;
+				left: 50%;
+				top: 0;
+				width: 24rem;
+				height: 15rem;
+				margin-left: -12rem;
+				background: url(https://zhushou.2345cdn.net/guanwang/glide.png) 50% 50% no-repeat;
+				background-size: 100% 100%;
+				animation: run 400ms linear infinite;
+			}
+
+			.arrow2 {
+				top: auto;
+				bottom: 0;
+				animation: run2 400ms linear infinite;
+			}
+
+			@keyframes run {
+				from {
+					opacity: 0.1;
+					transform: translateY(0);
+				}
+				to {
+					opacity: 1;
+					transform: translateY(15rem);
+				}
+			}
+			@keyframes run2 {
+				from {
+					opacity: 1;
+					transform: translateY(0);
+				}
+				to {
+					opacity: 0.1;
+					transform: translateY(15rem);
+				}
+			}
+
+			.headerlogo {
+				margin-top: 85rem;
+			}
+
+			#headerlogo {
+				width: 294rem;
+				height: 82rem;
+				margin-bottom: 42rem;
+			}
+
+			.headertext {
+				margin-bottom: 46rem;
+				text-align: center;
+				font-size: 38rem;
+				color: #000;
+			}
+
+			.pic1 {
+				width: 435rem;
+				height: 610rem;
+				margin: 23px auto 0;
+				text-align: center;
+			}
+
+			@media (orientation: landscape) {
+				.headerwrapper {
+					height: auto;
+				}
+			}
+
+			#pic1 {
+				width: 100%;
+			}
+
+			.download {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 476rem;
+				height: 102rem;
+				border-radius: 99px;
+				background: #ffe001;
+				box-shadow: 0px 10rem 12rem 2rem rgba(225, 217, 188, 0.7);
+				border: 0 none;
+				font-weight: bold;
+				font-size: 40rem;
+				color: #000;
+			}
+			
+			.android {
+				width: 35rem;
+				height: 45rem;
+				margin: 0 14rem 0 0;
+			}
+
+			.case-slogan {
+				padding-top: 62rem;
+				line-height: 1.46;
+				font-size: 52rem;
+				font-weight: bold;
+				color: #000;
+			}
+
+			.case-text {
+				font-size: 32rem;
+				font-weight: 400;
+				color: rgba(0,0,0,0.7);
+				line-height: 1.43;
+			}
+
+			.case1 {
+				height: 1080rem;
+				background: url(./zsimg/images/footerpic1.jpg) 50% 0 no-repeat;
+				background-size: cover;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+
+			.case2 {
+				height: 1080rem;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				padding-bottom: 150%;
+				background: url(./zsimg/images/footerpic2.jpg) 50% 0 no-repeat;
+				background-size: cover;
+			}
+
+			.case3 {
+				height: 1436pxrem;
+				background: url(./zsimg/images/footerpic3.jpg) 50% 0 no-repeat;
+				background-size: cover;
+				text-align: center;
+			}
+
+			.case3-text {
+				margin-bottom: 932rem;
+			}
+
+			.footer-download {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 551rem;
+				height: 112rem;
+				margin: 0 auto 48rem;
+				border-radius: 99px;
+				background: #ffe001;
+				box-shadow: 0 10rem 12rem 2rem rgba(225, 217, 188, 0.7);
+				border: 0 none;
+				font-size: 40rem;
+				font-weight: bold;
+				color: #000;
+			}
+
+			.cnaac {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin-bottom: 15rem;
+			}
+
+			.cnaacicon {
+				width: 20rem;
+				height: 19rem;
+				margin-right: 7rem;
+			}
+
+			.cnaactext {
+				transform: scale(0.75);
+				transform-origin: 0 50%;
+				font-size: 24rem;
+				font-weight: 400;
+				color: #000;
+			}
+
+			.copyright {
+				margin-bottom: 65rem;
+				transform: scale(0.75);
+				text-align: center;
+				font-size: 24rem;
+				font-weight: 400;
+				color: #000;
+			}
+
+			.copyright a {
+				color: #000;
+			}
+
+			.isIos {
+				pointer-events: none;
+				background: #e4e4e4;
+				box-shadow: none;
+				font-weight: normal;
+				font-size: 30rem;
+				color: #999;
+			}
+		</style>
+	</head>
+	<body>
+		<img
+			src="https://zhushou.2345cdn.net/guanwang/logo-vi.png"
+			width="121"
+			height="75"
+			alt="阿米游"
+			style="position: absolute; top: 0; left: -400px; opacity: 0"
+		/>
+		<img
+			src="https://zhushou.2345cdn.net/guanwang/slogan-vi.png"
+			width="200"
+			height="133"
+			alt="海量游戏 即点即玩~"
+			style="position: absolute; top: 0; left: -400px; opacity: 0"
+		/>
+		<div class="headerwrapper" id="headerwrapper">
+			<div class="header">
+				<div class="headerlogo">
+					<img src="https://zhushou.2345cdn.net/guanwang/headerlogo.png" alt="阿米游" id="headerlogo" />
+				</div>
+				<p class="headertext">海量游戏 即点即玩~</p>
+				<div class="pic1">
+					<img src="https://zhushou.2345cdn.net/guanwang/pic1.png" id="pic1" alt="APP截图" />
+				</div>
+			</div>
+			<div class="action-area">
+				<button type="button" class="download" id="download">
+					<img src="https://zhushou.2345cdn.net/guanwang/android.png" alt="" class="android">
+					<span class="downloadtext">立即下载</span>
+				</button>
+				<div class="arrow-group">
+					<span class="arrow1"></span>
+					<span class="arrow2"></span>
+				</div>
+			</div>
+		</div>
+		<div class="case1">
+			<p class="case-slogan case1-slogan">无需安装 一键打开</p>
+			<p class="case-text case1-text">即点即玩，在线畅玩小游戏！</p>
+		</div>
+		<div class="case2">
+			<p class="case-slogan case2-slogan">海量小游戏 简单易上手</p>
+			<p class="case-text case2-text">每周上新，精彩不断！</p>
+		</div>
+		<div class="case3">
+			<p class="case-slogan case3-slogan">精彩视频 先看后玩</p>
+			<p class="case-text case3-text">游戏录频，好玩看得见！</p>
+			<button type="button" class="footer-download" id="footer-download">
+				<img src="https://zhushou.2345cdn.net/guanwang/android.png" alt="" class="android">
+				<span class="footer-downloadtext">立即下载</span>
+			</button>
+			<div class="cnaac">
+				<img src="https://zhushou.2345cdn.net/guanwang/cnaac.png" alt="" class="cnaacicon" />
+				<span class="cnaactext">CNAAC认证合作伙伴</span>
+			</div>
+			<p class="copyright">
+				版权所有 宁波坤达智能科技有限公司
+				<a href="//beian.miit.gov.cn/" target="_blank" rel="nofollow">浙ICP备2021036200号-1</a>
+			</p>
+		</div>
+		<div class="mask">
+			<img src="https://zhushou.2345cdn.net/guanwang/footerlogo.png" alt="" class="mask-logo" />
+			<p class="mask-text">请使用手机浏览器下载阿米游</p>
+			<img src="https://zhushou.2345cdn.net/guanwang/guidearrows.png" alt="" class="mask-guide-arrows" />
+		</div>
+	</body>
+	<script type="text/javascript">
+		var from = new URLSearchParams(location.search).get('from')
+		if (from === 'qrcode') {
+			sendBeacon('m_qrcode')
+		} else {
+			sendBeacon('m_gf')
+		}
+		var downloadBtn = document.getElementById('download')
+		var downloadBtn2 = document.getElementById('footer-download')
+		var commonObj = {
+			browser: function () {
+				const u = navigator.userAgent
+				return {
+					ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), // ios终端
+					android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, // android终端或uc浏览器
+					weixin: u.indexOf('MicroMessenger') > -1, // 是否微信
+				}
+			},
+		}
+		var ua = commonObj.browser()
+		if (ua.ios === true) {
+			var text = '暂无iOS版本'
+			downloadBtn.classList.add('isIos')
+			downloadBtn2.classList.add('isIos')
+
+			downloadBtn.innerHTML = text
+			downloadBtn2.innerHTML = text
+		} else if (from === 'qrcode') {
+			if (ua.weixin) {
+				openWXTips()
+			} else {
+				dlCb('https://download.2345.cn/2345yidong/amy_gf_pc.apk')
+			}
+		}
+
+		downloadBtn.onclick = function () {
+			if (ua.weixin) {
+				openWXTips()
+			} else {
+				dlCb('https://download.2345.cn/2345yidong/amy_gf_m_shang.apk', 'm_shang_button_amiyoo')
+			}
+		}
+		downloadBtn2.onclick = function () {
+			if (ua.weixin) {
+				openWXTips()
+			} else {
+				dlCb('https://download.2345.cn/2345yidong/amy_gf_m_xia.apk', 'm_xia_button_amiyoo')
+			}
+		}
+		document.querySelector('.arrow-group').onclick = function () {
+			var target = document.querySelector('.case1')
+			if (target) {
+				target.scrollIntoView({
+					behavior: 'smooth',
+				})
+			}
+		}
+
+		function openWXTips() {
+			var mask = document.getElementsByClassName('mask')[0]
+			mask.style.display = 'flex'
+		}
+		function dlCb(link, tj) {
+			if (tj) {
+				sendBeacon(tj)
+			}
+			var link = link
+			var a = document.createElement('a')
+			a.setAttribute('href', link)
+			a.click()
+		}
+
+		function sendBeacon(str) {
+			var tracking = new Image()
+			tracking.src =
+				'https://union2.50bang.org/web/ajax104?uId2=SPTNPQRLSX&r=' +
+				encodeURIComponent(document.referrer) +
+				'&fBL=' +
+				screen.width +
+				'*' +
+				screen.height +
+				'&lO=' +
+				encodeURIComponent(str)
+		}
+	</script>
+</html>
