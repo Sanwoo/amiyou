@@ -166,38 +166,35 @@
 			}
 
 			.section {
-				height: 4170px;
+				height: 3240px;
 				overflow: hidden;
 			}
 
 			.case1,
 			.case2,
 			.case3 {
-				height: 1390px;
+				height: 1080px;
 			}
 
 			.case1 .inner,
 			.case2 .inner,
 			.case3 .inner {
 				position: relative;
+				height: 100%;
 			}
 
 			.case1 {
-				background: url(https://zhushou.2345cdn.net/guanwang/case1-bg-1.jpg) 50% 50% no-repeat;
-				background-size: auto 100%;
+				background-color: rgba(255, 252, 239, 1);
 				text-align: right;
 			}
 
 			.case2 {
-				/* background: url(https://zhushou.2345cdn.net/guanwang/case2-bg.jpg) 50% 50% no-repeat;
-				background-size: auto 100%; */
 				background-color: #fff;
 				text-align: left;
 			}
 
 			.case3 {
-				background: url(https://zhushou.2345cdn.net/guanwang/case3-bg-1.jpg) 50% 50% no-repeat;
-				background-size: auto 100%;
+				background-color: rgba(255, 252, 239, 1);
 				text-align: right;
 			}
 
@@ -212,6 +209,31 @@
 			.case3-commonpic {
 				width: 81px;
 				height: 14px;
+			}
+
+			.case1-pic {
+				width: 642px;
+				height: 927px;
+				position: relative;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				margin-left: 368px;
+			}
+
+			.case1-top {
+				width: 642px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: 999;
+			}
+
+			.case1-bottom {
+				width: 642px;
+				position: absolute;
+				bottom: 0;
+				left: 0;
 			}
 
 			.case1-slogan {
@@ -240,19 +262,40 @@
 			}
 
 			.case2-pic {
-				margin: 110px 0 0 -58px;
+				width: 624px;
+				height: 895px;
+				position: relative;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				margin-left: -382px;
+			}
+
+			.case2-top {
+				width: 624px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: 999;
+			}
+
+			.case2-bottom {
+				width: 624px;
+				position: absolute;
+				bottom: 0;
+				left: 0;
 			}
 
 			.case2-commonpic {
 				position: absolute;
-				left: 514px;
-				top: 466px;
+				left: 556px;
+				top: 423px;
 			}
 
 			.case2-slogan {
 				position: absolute;
-				left: 508px;
-				top: 502px;
+				left: 556px;
+				top: 477px;
 				width: 694px;
 				height: 92px;
 				font-size: 64px;
@@ -264,8 +307,8 @@
 
 			.case2-text {
 				position: absolute;
-				left: 507px;
-				top: 624px;
+				left: 556px;
+				top: 609px;
 				width: 421px;
 				height: 153px;
 				font-size: 24px;
@@ -273,6 +316,32 @@
 				color: rgba(0, 0, 0, 0.62);
 				line-height: 34px;
 				letter-spacing: 2px;
+			}
+
+			.case3-pic {
+				width: 652px;
+				height: 951px;
+				background-color: pink;
+				position: relative;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				margin-left: 373px;
+			}
+
+			.case3-top {
+				width: 652px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: 999;
+			}
+
+			.case3-bottom {
+				width: 652px;
+				position: absolute;
+				bottom: 0;
+				left: 0;
 			}
 
 			.case3-commonpic {
@@ -519,11 +588,14 @@
 					<p class="case1-text">
 						即点即玩，在线畅玩小游戏！
 					</p>
+					<div class="case1-pic">
+						<img src="./zsimg/images/case1-top.jpg" alt="" class="case1-top">
+						<img src="./zsimg/images/case1-bottom.jpg" alt="" class="case1-bottom">
+					</div>
 				</div>
 			</div>
 			<div class="case2">
 				<div class="inner">
-					<img src="https://zhushou.2345cdn.net/guanwang/case2-pic.jpg" alt="" class="case2-pic">
 					<img
 						src="https://zhushou.2345cdn.net/guanwang/commonpic-1.png"
 						alt=""
@@ -532,6 +604,10 @@
 					/>
 					<h2 class="case2-slogan">海量小游戏 简单易上手</h2>
 					<p class="case2-text">每周上新，精彩不断！</p>
+					<div class="case2-pic">
+						<img src="./zsimg/images/case2-top.jpg" alt="" class="case1-top">
+						<img src="./zsimg/images/case2-bottom.jpg" alt="" class="case1-bottom">
+					</div>
 				</div>
 			</div>
 			<div class="case3">
@@ -546,6 +622,10 @@
 					<p class="case3-text">
 						游戏录频，好玩看得见！
 					</p>
+					<div class="case3-pic">
+						<img src="./zsimg/images/case3-top.jpg" alt="" class="case3-top">
+						<img src="./zsimg/images/case3-bottom.jpg" alt="" class="case3-bottom">
+					</div>
 				</div>
 			</div>
 		</section>
